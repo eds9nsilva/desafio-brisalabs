@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  db:
+    build: .
+    container_name: desafio-brisalabs
+    restart: always
+    tty: true
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=brisalabs
